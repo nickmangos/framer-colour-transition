@@ -15,3 +15,5 @@ Example
 This will transition a layer called "background" from its original rgba colour to the new colour with a 1 second duration.
 
 The frames per second parameter is optional; it will default to 30fps 
+
+To use this module add ```module = require "colourTransition"``` to the head of your project.
