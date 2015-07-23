@@ -1,6 +1,6 @@
 module = require "colourTransition"
 
-background = new BackgroundLayer backgroundColor: 'rgba(235, 114, 120, 1)'
+background = new BackgroundLayer backgroundColor: 'rgba(40, 193, 204, 1)'
 
 # List of button colours
 colours = ['rgba(40, 193, 204, 1)', 'rgba(41, 166, 224, 1)' ,'rgba(235, 114, 120, 1)', 'rgba(151, 133, 221, 1)' ,'rgba(77, 75, 76, 1)']
@@ -10,7 +10,7 @@ buttons = new Layer backgroundColor : "transparent"
 buttons.width = 580
 buttons.height = 200
 buttons.center()
-buttons.y = buttons.y + 460
+buttons.y = buttons.y + 580
 
 # Set variables for placement and last button pressed
 placement = 0
@@ -27,8 +27,8 @@ for colour in colours
 	# Set button colour and styling
 	button.buttonColour = new Layer backgroundColor : colour
 	button.buttonColour.superLayer = button
-	button.buttonColour.width = button.width/1.5
-	button.buttonColour.height = button.width/1.5
+	button.buttonColour.width = button.width/1.64
+	button.buttonColour.height = button.width/1.64
 	button.buttonColour.center()
 	button.buttonColour.borderRadius = button.buttonColour.width/2
 	button.borderRadius = button.width/2
@@ -42,17 +42,17 @@ for colour in colours
 	
 	# Set click behavior of buttons using colour transition module
 	button.on Events.Click, (event, button)->
-		module.colourTransition(background, button.colour, 1, 30)
+		module.colourTransition(background, button.colour, 1, 60)
 		button.buttonColour.animate({
 			properties: {scale:0.4}
-			time: 1
+			time: .6
 		})
 		
 		# Toggle previous button
 		if lastButton?
 			lastButton.animate({
 				properties: {scale:1}
-				time: 1
+				time: .6
 				})
 		lastButton = button.buttonColour
 		
