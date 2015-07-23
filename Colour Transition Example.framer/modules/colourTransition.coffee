@@ -48,3 +48,4 @@ exports.colourTransition = (layer, colour, duration, fps) ->
 	startInterval()
 	## TODO
 	## Set the true colour value after fade ends.
+	## Ability to stop mid-fade.
