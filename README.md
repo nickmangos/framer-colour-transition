@@ -1,6 +1,8 @@
 # Framer Colour Transition Module 
 A framer module that transitions the background colour of a layer.
 
+Demo - http://share.framerjs.com/m1zbxn0d61nb/
+
 Allows you to use the ```colourTransition()``` function.
 The function accepts 4 parameters.
 
