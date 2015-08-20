@@ -47,5 +47,6 @@ exports.colourTransition = (layer, colour, duration, fps) ->
 			## print i + "(R)" + Math.round(r) + "(G)" + Math.round(g) + "(B)" + Math.round(b) + "(A)" + a
 	startInterval()
 	## TODO
+	## Fix split string issue
 	## Set the true colour value after fade ends.
 	## Ability to stop mid-fade.
